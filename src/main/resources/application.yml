@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: local  # 默认使用本地配置
   application:
     name: ince-ai-agent
 server:
@@ -22,3 +24,14 @@ knife4j:
   enable: true
   setting:
     language: zh_cn
+
+# 日志配置
+logging:
+  level:
+    root: INFO
+    com.ince.inceaiagent: DEBUG
+
+# 其他非敏感配置
+app:
+  name: ince-ai-agent
+  version: 1.0.0
