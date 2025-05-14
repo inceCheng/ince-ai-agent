@@ -1,0 +1,23 @@
+# 本地开发环境配置
+# 注意：此文件不为模板文件，开发者需要自行修改，复制一份到application-local.yml中，修改为自己的配置
+dashscope:
+  api_key: your_api_key
+spring:
+  application:
+    name: spring-ai-alibaba-qwq-chat-client-example
+  ai:
+    dashscope:
+      api-key: your_api_key
+      chat:
+        options:
+          model: qwen-plus
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        dimensions: 1536
+        distance-type: COSINE_DISTANCE
+        max-document-batch-size: 10000 # Optional: Maximum number of documents per batch
+  datasource:
+    url: jdbc:postgresql://your_host/yu_ai_agent
+    username: your_username
+    password: your_password
